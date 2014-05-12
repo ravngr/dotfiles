@@ -36,7 +36,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/.dotfiles/oh-my-zsh-custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -45,7 +45,6 @@ plugins=(autoenv cp debian dirhistory sudo tmux)
 
 export TMUX_POWERLINE_SEG_DATE_FORMAT="%d/%m/%y"
 export TMUX_POWERLINE_SEG_TIME_FORMAT="%I:%M%P"
-export TMUX_POWERLINE_SEG_HOSTNAME_FORMAT="long"
 export TMUX_POWERLINE_SEG_WEATHER_LOCATION="1103816"
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_AUTOCONNECT=false
@@ -56,7 +55,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 #export PATH=/home/e02260/local/bin:/home/e02260/.local/bin:/home/e02260/local/cuda-6.0/bin:$PATH
 #export LD_LIBRARY_PATH=/home/e02260/local/cuda-6.0/lib64:$LD_LIBRARY_PATH
-
 #export MANPATH="~/local/man:$MANPATH"
 
 # You may need to manually set your language environment
