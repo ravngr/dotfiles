@@ -6,10 +6,10 @@
 export DOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # List of directories to create
-dirs = ( .dotbackup .vim .vim/colors )
+dirs=( .dotbackup .vim .vim/colors )
 
 # List of files to link
-files = ( .bash_logout .bashrc .profile .tmux.conf .tmux-powerlinerc .vimrc .zshrc )
+files=( .bash_logout .bashrc .profile .tmux.conf .tmux-powerlinerc .vimrc .zshrc )
 
 # Create directories
 for d in "${dirs[@]}"; do
