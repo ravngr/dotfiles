@@ -1,0 +1,23 @@
+if [ $UID -eq 0 ]; then
+	NCOLOR="red"
+	PROMPT_CHAR="#"
+else
+	NCOLOR="color255"
+	PROMPT_CHAR="$"
+fi
+
+PROMPT_BG="25"
+PROMPT_FG="231"
+PATH_BG="235"
+PATH_FG="255"
+VCS_FG="231"
+VCS_BG="55"
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{%F{$PATH_BG}%K{$VCS_BG}%}%{%F{$VCS_FG}%}  "
+ZSH_THEME_GIT_PROMPT_SUFFIX=" %{%F{$VCS_BG}%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="*"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="?"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+PROMPT='%{%K{$PROMPT_BG}%F{$PROMPT_FG}%}%n@%m %{%K{$PATH_BG}%F{$PROMPT_BG}%}%{%F{$PROMPT_FG}%} %~ %{%F{$PATH_BG}%}$(git_prompt_info)%{%K{255}%}%{%k%F{255}%} %{$reset_color%}'
+
