@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.dotfiles/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -41,11 +41,9 @@ ZSH_CUSTOM=~/.dotfiles/oh-my-zsh-custom
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autoenv cp debian dirhistory sudo tmux)
+plugins=(autoenv cp dirhistory sudo tmux)
 
-export TMUX_POWERLINE_SEG_DATE_FORMAT="%d/%m/%y"
-export TMUX_POWERLINE_SEG_TIME_FORMAT="%I:%M%P"
-export TMUX_POWERLINE_SEG_WEATHER_LOCATION="1103816"
+# tmux plugin options
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_AUTOCONNECT=false
 export ZSH_TMUX_FIXTERM=false
@@ -53,9 +51,9 @@ export ZSH_TMUX_FIXTERM=false
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-#export PATH=/home/e02260/local/bin:/home/e02260/.local/bin:/home/e02260/local/cuda-6.0/bin:$PATH
-#export LD_LIBRARY_PATH=/home/e02260/local/cuda-6.0/lib64:$LD_LIBRARY_PATH
-#export MANPATH="~/local/man:$MANPATH"
+if [ -f ~/.path ]; then
+    source ~/.path
+fi
 
 # You may need to manually set your language environment
 export LANG=en_AU.UTF-8
