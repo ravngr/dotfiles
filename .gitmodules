@@ -22,3 +22,6 @@
 [submodule "tmuxinator"]
 	path = tmuxinator
 	url = https://github.com/tmuxinator/tmuxinator.git
+[submodule "vim-colorschemes"]
+	path = vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
