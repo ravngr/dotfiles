@@ -9,7 +9,7 @@ export DOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 dirs=( .dotbackup .vim .vim/colors )
 
 # List of files to link
-files=( .bash_logout .bashrc .profile .tmux.conf .tmux-powerlinerc .vimrc .zshrc )
+files=( .bash_logout .bashrc .gitconfig .profile .tmux.conf .tmux-powerlinerc .vimrc .zshrc )
 
 # Create directories
 for d in "${dirs[@]}"; do
@@ -17,13 +17,18 @@ for d in "${dirs[@]}"; do
 done
 
 for f in "${files[@]}"; do
+    # Unlink existing
+    if [ -L ~/$f ]; then
+	unlink ~/$f
+    fi
+
     # Backup any existing files
-    if [ -f ~/$f ]; then
-	cp ~/$f ~/.dotbackup
+    if [ -e ~/$f ] && [ ! -L ~/$f ]; then
+	cp ~/$f ~/$f.bak
     fi
 
     # Create link to config file
-    ln -s $DOT_PATH/$f ~/$f
+    ln -sf $DOT_PATH/$f ~/$f
 done
 
 ### Install modules
