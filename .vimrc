@@ -10,6 +10,9 @@ filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
 
+" Additional extensions
+au BufNewFile,BufRead *.cuh set filetype=cuda
+
 " Automatically reload a file that has been altered externally
 set autoread
 
@@ -92,4 +95,6 @@ set encoding=utf8
 
 " Use powerline fonts if airline is setup
 let g:airline_powerline_fonts = 1
+
+colorscheme grb256
 
