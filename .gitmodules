@@ -28,3 +28,6 @@
 [submodule "gitignore"]
 	path = gitignore
 	url = https://github.com/github/gitignore.git
+[submodule "Cpp11-Syntax-Support"]
+	path = Cpp11-Syntax-Support
+	url = https://github.com/thynson/Cpp11-Syntax-Support.git

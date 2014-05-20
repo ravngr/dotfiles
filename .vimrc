@@ -12,6 +12,7 @@ set grepprg=grep\ -nH\ $*
 
 " Additional extensions
 au BufNewFile,BufRead *.cuh set filetype=cuda
+au BufNewFile,BufRead *.cpp set filetype=cpp11
 
 " Automatically reload a file that has been altered externally
 set autoread
