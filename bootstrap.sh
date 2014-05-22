@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Attempt to install
-
+### Install config files
 # Locate script path
 export DOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -9,7 +8,7 @@ export DOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 dirs=( .dotbackup .vim )
 
 # List of files to link
-files=( bash_logout bashrc gitconfig profile tmux.conf tmux-powerlinerc vimrc zshrc )
+files=( bash_logout bash_profile bashrc gitconfig profile tmux.conf tmux-powerlinerc vimrc zshrc )
 
 # Create directories
 for d in "${dirs[@]}"; do
@@ -24,7 +23,7 @@ for f in "${files[@]}"; do
 
     # Backup any existing files
     if [ -e ~/.$f ] && [ ! -L ~/.$f ]; then
-	cp ~/.$f ~/$f.bak
+	cp ~/.$f ~/.dotbackup/.$f.bak
     fi
 
     # Create link to config file
@@ -38,7 +37,11 @@ cp -R $DOT_PATH/Cpp11-Syntax-Support/syntax ~/.vim
 cp -R $DOT_PATH/nerdtree/{autoload,doc,lib,nerdtree_plugin,plugin,syntax} ~/.vim
 cp -R $DOT_PATH/vim-airline/{autoload,doc,plugin,t} ~/.vim
 
-# git setup
-git config --global user.name "Chris Harrison"
-git config --global user.email dev@ravngr.com
+if [ -f /usr/bin/zsh ]; then
+    ls -s /usr/bin/zsh ~/.zsh
+elif [ -f ~/local/bin/zsh ]; then
+    ls -s ~/local/bin/zsh ~/.zsh
+else
+    echo "Cannot setup zsh link to ~/.zsh, tmux may not run properly"
+fi
 

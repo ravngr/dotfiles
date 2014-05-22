@@ -41,8 +41,10 @@ xterm*|rxvt*|screen-256color)
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
     fi
+    ;;
 *)
     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
+    ;;
 esac
 
 # If this is an xterm set the title to user@host:dir
