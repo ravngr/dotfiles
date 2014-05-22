@@ -39,8 +39,8 @@ export ZSH_TMUX_FIXTERM=false
 source $ZSH/oh-my-zsh.sh
 
 # User path configuration
-if [ -f ~/.path ]; then
-    source ~/.path
+if [ -f ~/.localenv ]; then
+    source ~/.localenv
 fi
 
 # You may need to manually set your language environment
