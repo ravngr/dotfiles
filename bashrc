@@ -15,10 +15,10 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=100000
 
-# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
+# Check the window size after each command and, if necessary, update the values of LINES and COLUMNS
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will match all files and zero or more directories and subdirectories.
+# If set, the pattern "**" used in a pathname expansion context will match all files and zero or more directories and subdirectories
 shopt -s globstar
 
 # Make less more friendly for non-text input files, see lesspipe(1)

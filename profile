@@ -12,7 +12,7 @@ if [ -d "$HOME/local/bin" ] ; then
     PATH="$PATH:$HOME/local/bin"
 fi
 
-if [ -f "$HOME/.path" ] ; then
-    . "$HOME/.path"
+if [ -f "$HOME/.localenv" ] ; then
+    . "$HOME/.localenv"
 fi
 
