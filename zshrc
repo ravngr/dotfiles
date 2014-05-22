@@ -38,7 +38,7 @@ export ZSH_TMUX_FIXTERM=false
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# User path configuration
 if [ -f ~/.path ]; then
     source ~/.path
 fi

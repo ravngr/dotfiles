@@ -6,7 +6,7 @@
 export DOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # List of directories to create
-dirs=( .dotbackup .vim .vim/colors )
+dirs=( .dotbackup .vim )
 
 # List of files to link
 files=( bash_logout bashrc gitconfig profile tmux.conf tmux-powerlinerc vimrc zshrc )
@@ -37,4 +37,8 @@ cp -R $DOT_PATH/vim-colorschemes/colors ~/.vim/colors
 cp -R $DOT_PATH/Cpp11-Syntax-Support/syntax ~/.vim
 cp -R $DOT_PATH/nerdtree/{autoload,doc,lib,nerdtree_plugin,plugin,syntax} ~/.vim
 cp -R $DOT_PATH/vim-airline/{autoload,doc,plugin,t} ~/.vim
+
+# git setup
+git config --global user.name "Chris Harrison"
+git config --global user.email dev@ravngr.com
 
