@@ -32,15 +32,15 @@ done
 
 ### Install modules
 cp -R $DOT_PATH/vim-colorschemes/colors ~/.vim/colors
-
 cp -R $DOT_PATH/Cpp11-Syntax-Support/syntax ~/.vim
 cp -R $DOT_PATH/nerdtree/{autoload,doc,lib,nerdtree_plugin,plugin,syntax} ~/.vim
 cp -R $DOT_PATH/vim-airline/{autoload,doc,plugin,t} ~/.vim
 
+### Alias
 if [ -f /usr/bin/zsh ]; then
-    ls -s /usr/bin/zsh ~/.zsh
+    ln -s /usr/bin/zsh ~/.zsh
 elif [ -f ~/local/bin/zsh ]; then
-    ls -s ~/local/bin/zsh ~/.zsh
+    ln -s ~/local/bin/zsh ~/.zsh
 else
     echo "Cannot setup zsh link to ~/.zsh, tmux may not run properly"
 fi
