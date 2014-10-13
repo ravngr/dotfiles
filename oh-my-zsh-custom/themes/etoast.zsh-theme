@@ -1,12 +1,13 @@
 if [ $UID -eq 0 ]; then
 	NCOLOR="red"
+	PROMPT_BG="233"
 	PROMPT_CHAR="#"
 else
 	NCOLOR="color255"
+	PROMPT_BG="25"
 	PROMPT_CHAR="$"
 fi
 
-PROMPT_BG="25"
 PROMPT_FG="231"
 PATH_BG="235"
 PATH_FG="255"

@@ -29,7 +29,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=~/.dotfiles/oh-my-zsh-custom
 
 # Plugins to load
-plugins=(autoenv cp dirhistory sudo tmux)
+plugins=(autoenv cp dirhistory sudo)
 
 # tmux plugin options
 export ZSH_TMUX_AUTOSTART=true
